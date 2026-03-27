@@ -1,0 +1,96 @@
+{
+  "timestamp": "20260326T184340",
+  "n_rows": 10,
+  "eval_id": "eval_69c56535a4f48191ab8319e11ad4ef40",
+  "before": {
+    "version": 1,
+    "prompt": "You are a security code reviewer. Given a code snippet, identify any security vulnerabilities.",
+    "avg_score": 0.625,
+    "pass_rate": 0.3,
+    "graders": {
+      "cwe_coverage_grader-17d82e30-3084-4351-8a5b-0c8c4712714d": {
+        "avg_score": 0.3,
+        "pass_rate": 0.3,
+        "n": 10
+      },
+      "false_positive_grader-4a0cbada-0e9d-40de-aea5-26c2fc11bd23": {
+        "avg_score": 1.0,
+        "pass_rate": 1.0,
+        "n": 10
+      },
+      "cvss_accuracy_grader-902cf583-f33d-4414-86f3-1b4bbeea1529": {
+        "avg_score": 0.3,
+        "pass_rate": 0.3,
+        "n": 10
+      },
+      "remediation_quality_judge-29a884a1-4838-42a2-a2b3-762774c6e293": {
+        "avg_score": 0.9,
+        "pass_rate": 0.9,
+        "n": 10
+      }
+    },
+    "row_scores": [
+      1.0,
+      1.0,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.75
+    ]
+  },
+  "after": {
+    "version": 3,
+    "prompt": "You are a security code auditor tasked with performing a comprehensive vulnerability assessment on the provided code snippet. Follow these instructions precisely:\n\n1. For every confirmed security vulnerability, identify and cite the specific CWE (Common Weakness Enumeration) identifier(s).\n2. Clearly separate confirmed vulnerabilities from code smells or non-critical issues; explicitly explain why an issue is or is not a vulnerability.\n3. Do not flag code that demonstrates safe defensive practices\u2014such as thorough input validation, proper error handling, or secure coding patterns\u2014as vulnerable.\n4. Systematically evaluate the code against all OWASP Top 10 categories: Injection, Broken Authentication, Sensitive Data Exposure, XML External Entities (XXE), Broken Access Control, Security Misconfiguration, Cross-Site Scripting (XSS), Insecure Deserialization, Using Components with Known Vulnerabilities, and Insufficient Logging & Monitoring. For each category, explicitly state whether relevant vulnerabilities are present or absent.\n5. For each identified issue, provide concise reasoning including code context, security impact, and how the vulnerability may be exploited.\n6. When no vulnerabilities are detected, explicitly declare that the code appears secure with no identifiable security flaws.\n\nAnalyze the following code snippet and produce a detailed, structured, and precise security analysis following all the above criteria.",
+    "model": "gpt-4.1-mini",
+    "avg_score": 0.55,
+    "pass_rate": 0.2,
+    "graders": {
+      "cwe_coverage_grader-17d82e30-3084-4351-8a5b-0c8c4712714d": {
+        "avg_score": 0.2222,
+        "pass_rate": 0.2222,
+        "n": 9
+      },
+      "false_positive_grader-4a0cbada-0e9d-40de-aea5-26c2fc11bd23": {
+        "avg_score": 1.0,
+        "pass_rate": 1.0,
+        "n": 9
+      },
+      "cvss_accuracy_grader-902cf583-f33d-4414-86f3-1b4bbeea1529": {
+        "avg_score": 0.2222,
+        "pass_rate": 0.2222,
+        "n": 9
+      },
+      "remediation_quality_judge-29a884a1-4838-42a2-a2b3-762774c6e293": {
+        "avg_score": 1.0,
+        "pass_rate": 1.0,
+        "n": 9
+      }
+    },
+    "row_scores": [
+      1.0,
+      1.0,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.0
+    ]
+  },
+  "delta": {
+    "avg_score": -0.075,
+    "pass_rate": -0.1,
+    "graders": {
+      "cwe_coverage_grader": 0.0,
+      "false_positive_grader": 0.0,
+      "cvss_accuracy_grader": 0.0,
+      "remediation_quality_judge": 0.0
+    }
+  }
+}

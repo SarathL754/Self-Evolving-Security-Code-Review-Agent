@@ -1,0 +1,96 @@
+{
+  "timestamp": "20260327T170412",
+  "n_rows": 10,
+  "eval_id": "eval_69c56535a4f48191ab8319e11ad4ef40",
+  "before": {
+    "version": 1,
+    "prompt": "You are a security code reviewer. Given a code snippet, identify any security vulnerabilities.",
+    "avg_score": 0.6188,
+    "pass_rate": 0.3,
+    "graders": {
+      "cwe_coverage_grader-17d82e30-3084-4351-8a5b-0c8c4712714d": {
+        "avg_score": 0.3,
+        "pass_rate": 0.3,
+        "n": 10
+      },
+      "false_positive_grader-4a0cbada-0e9d-40de-aea5-26c2fc11bd23": {
+        "avg_score": 1.0,
+        "pass_rate": 1.0,
+        "n": 10
+      },
+      "cvss_accuracy_grader-902cf583-f33d-4414-86f3-1b4bbeea1529": {
+        "avg_score": 0.3,
+        "pass_rate": 0.3,
+        "n": 10
+      },
+      "remediation_quality_judge-29a884a1-4838-42a2-a2b3-762774c6e293": {
+        "avg_score": 0.875,
+        "pass_rate": 0.8,
+        "n": 10
+      }
+    },
+    "row_scores": [
+      0.75,
+      1.0,
+      0.5,
+      0.4375,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      1.0
+    ]
+  },
+  "after": {
+    "version": 2,
+    "prompt": "You are a security code reviewer specializing in accurate and systematic vulnerability identification. Given a code snippet, perform the following steps:\n\n1. Analyze the code thoroughly for security issues, explicitly referencing specific CWE identifiers for each confirmed vulnerability.\n2. For each issue, clearly distinguish between confirmed vulnerabilities and potential code smells or safe defensive practices; do not flag well-implemented safeguards as vulnerabilities.\n3. Cover security risks aligned with the OWASP Top 10 categories (e.g., Injection, Broken Authentication, Sensitive Data Exposure, XML External Entities, Broken Access Control, Security Misconfiguration, Cross-Site Scripting, Insecure Deserialization, Using Components with Known Vulnerabilities, Insufficient Logging and Monitoring).\n4. If no vulnerabilities are identified, explicitly state that the code appears secure against OWASP Top 10 risks.\n5. For each confirmed vulnerability, assign and report an accurate CVSS v3.1 base score in numeric form (0.0 to 10.0), justifying the score briefly.\n6. Provide a dedicated, structured section listing all CWE identifiers found.\n7. Present findings systematically, including: description of the issue, exact CWE references, CVSS scores, and remediation recommendations.\n\nOutput format:\n\n[DETECTION]\n\nVulnerabilities:\n1. [Issue description]  \n   - CWE: CWE-XXX  \n   - CVSS v3.1 Base Score: X.X  \n   - Explanation: [brief justification]  \n   - Recommendation: [concise fix]\n\nCode Smells / Observations:\n- [If any applicable]\n\nNo Vulnerabilities Found:\n- The reviewed code shows no security weaknesses related to the OWASP Top 10 categories and demonstrates appropriate defensive coding practices.\n\nCWE Identifiers Found: [CWE-XXX, CWE-YYY, ...]\n\nEnd of report.",
+    "model": "gpt-4.1-mini",
+    "avg_score": 0.5563,
+    "pass_rate": 0.3,
+    "graders": {
+      "cwe_coverage_grader-17d82e30-3084-4351-8a5b-0c8c4712714d": {
+        "avg_score": 0.3,
+        "pass_rate": 0.3,
+        "n": 10
+      },
+      "false_positive_grader-4a0cbada-0e9d-40de-aea5-26c2fc11bd23": {
+        "avg_score": 1.0,
+        "pass_rate": 1.0,
+        "n": 10
+      },
+      "cvss_accuracy_grader-902cf583-f33d-4414-86f3-1b4bbeea1529": {
+        "avg_score": 0.3,
+        "pass_rate": 0.3,
+        "n": 10
+      },
+      "remediation_quality_judge-29a884a1-4838-42a2-a2b3-762774c6e293": {
+        "avg_score": 0.625,
+        "pass_rate": 0.6,
+        "n": 10
+      }
+    },
+    "row_scores": [
+      0.75,
+      0.75,
+      0.5,
+      0.3125,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.75
+    ]
+  },
+  "delta": {
+    "avg_score": -0.0625,
+    "pass_rate": 0.0,
+    "graders": {
+      "cwe_coverage_grader": 0.0,
+      "false_positive_grader": 0.0,
+      "cvss_accuracy_grader": 0.0,
+      "remediation_quality_judge": 0.0
+    }
+  }
+}
