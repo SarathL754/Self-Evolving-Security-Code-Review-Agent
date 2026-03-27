@@ -250,3 +250,5 @@ requests>=2.32.5
 tqdm>=4.67.3
 python-dotenv>=1.2.2
 ```
+## Reference
+[OpenAI Cookbook: Self-Evolving Agents](https://developers.openai.com/cookbook/examples/partners/self_evolving_agents/autonomous_agent_retraining#3-self-evolving-loop-with-llm-as-a-judge)
